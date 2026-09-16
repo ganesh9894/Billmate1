@@ -25,6 +25,10 @@ jobs:
         run: |
           flutter create . --platforms=android --project-name billmate_ai
 
+      - name: Remove generated default test
+        run: |
+          rm -f test/widget_test.dart
+
       - name: Put BillMate AI main.dart in lib
         run: |
           mkdir -p lib
